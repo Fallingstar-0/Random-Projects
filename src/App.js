@@ -15,7 +15,6 @@ import ModalTest from "./components/custom-moda-popup/modal-test"
 import GithubProfileFinder from "./components/github-profile-finder"
 import SearchAutoComplete from "./components/search-autocomplete-with-api"
 import TreeViewTest from "./components/tree-view-test"
-// API key for pexels.com sCYE656aez48apGkQNUPojvq3qM1qMdYf75SEJ3BP3qp5ErsR3iitXz1
 
 function App() {
   return (
