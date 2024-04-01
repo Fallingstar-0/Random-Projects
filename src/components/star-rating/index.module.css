@@ -1,0 +1,16 @@
+.active {
+  color: yellow;
+}
+
+.inactive {
+  color: #000;
+}
+
+.starRating {
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(180deg, #7c2222 0%, #fff 100%);
+}

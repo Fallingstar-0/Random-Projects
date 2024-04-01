@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import MenuList from "./menu-list"
 import { FaPlus, FaMinus } from "react-icons/fa"
+import styles from "./index.module.css"
 
 const MenuItem = ({ item }) => {
   const [displayCurrentChildren, setDisplayCurrentChildren] = useState({})
@@ -13,7 +14,7 @@ const MenuItem = ({ item }) => {
   }
   return (
     <li>
-      <div className="menu-item">
+      <div className={styles.menuItem}>
         <p>{item.label}</p>
         {item && item.children && item.children.length ? (
           <span onClick={() => handleToggleChildren(item.label)}>

@@ -1,12 +1,14 @@
 import React from "react"
 import MenuItem from "./menu-item"
 
-const MenuList = ({ list = [] }) => {
+const MenuList = ({ list }) => {
   return (
     <ul>
-      {list && list.length > 0
-        ? list.map((item) => <MenuItem item={item} />)
-        : null}
+      {list && list.length ? (
+        list.map((listItem) => <MenuItem item={listItem} />)
+      ) : (
+        <div>Error.</div>
+      )}
     </ul>
   )
 }

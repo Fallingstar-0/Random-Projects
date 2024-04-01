@@ -22,7 +22,7 @@ function App() {
       <GithubProfileFinder />
       <ModalTest />
       <TabTest />
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      <ScrollIndicator url={"https://dummyjson.com/products?limit=10"} />
       <LightDarkMode />
       <QrCodeGenerator />
       <TreeView menus={menus} />

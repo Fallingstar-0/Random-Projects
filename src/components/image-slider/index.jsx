@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs"
-import "./styles.css"
+import styles from "./index.module.css"
 
 const ImageSlider = ({ url, page = 1, limit = 5 }) => {
   const [images, setImages] = useState([])
@@ -44,10 +44,10 @@ const ImageSlider = ({ url, page = 1, limit = 5 }) => {
   }
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <BsArrowLeftCircleFill
         onClick={handlePrevious}
-        className="arrow arrow-left"
+        className={`${styles.arrow} ${styles.arrowLeft}`}
       />
       {images && images.length > 0
         ? images.map((img, index) => (
@@ -57,25 +57,25 @@ const ImageSlider = ({ url, page = 1, limit = 5 }) => {
               alt={img.download_url}
               className={
                 currentSlide === index
-                  ? "current-image"
-                  : "current-image hide-current-image"
+                  ? `${styles.currentImage}`
+                  : `${styles.currentImage} ${styles.hideCurrentImage}`
               }
             />
           ))
         : null}
       <BsArrowRightCircleFill
         onClick={handleNext}
-        className="arrow arrow-right"
+        className={`${styles.arrow} ${styles.arrowRight}`}
       />
-      <span className="circle-indicators">
+      <span className={styles.circleIndicators}>
         {images && images.length
           ? images.map((_, index) => (
               <button
                 key={index}
                 className={
                   currentSlide === index
-                    ? "current-indicator"
-                    : "current-indicator inactive-indicator"
+                    ? `${styles.currentIndicator}`
+                    : `${styles.currentIndicator} ${styles.inactiveIndicator}`
                 }
                 onClick={() => setCurrentSlide(index)}
               ></button>

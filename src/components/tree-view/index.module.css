@@ -1,11 +1,15 @@
-.tree-view-container {
+.treeViewContainer {
   background-color: rgb(219, 98, 98);
   min-height: 100vh;
   width: 350px;
 }
 
-.menu-item {
+.menuItem {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+span {
+  cursor: pointer;
 }
