@@ -9,6 +9,7 @@ const Accordion = () => {
 
   const handleSingleSelect = (id) => {
     setSelected(selected === id ? null : id)
+    console.log(selected)
   }
 
   const handleMultiSelect = (id) => {
@@ -55,10 +56,10 @@ const Accordion = () => {
               </div>
               {enableMultiSelect
                 ? multiple.includes(item.id) && (
-                    <div className="content">{item.answer}</div>
+                    <div className="acc-content">{item.answer}</div>
                   )
                 : selected === item.id && (
-                    <div className="content">{item.answer}</div>
+                    <div className="acc-content">{item.answer}</div>
                   )}
             </div>
           ))
